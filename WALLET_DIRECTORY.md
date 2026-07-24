@@ -17,54 +17,54 @@ be unsupported, contradicting the wallet -- click the name for their evidence ·
 
 ## Wallet Overview & Primary Canton Network Features
 
-| Feature | [Dummy Wallet](wallets/dummy-wallet.yaml) |
-|---|---|
-| **Wallet Overview** |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;Website | [https://example.com/dummy-wallet](https://example.com/dummy-wallet) |
-| &nbsp;&nbsp;&nbsp;&nbsp;Added | 2026-06-10 |
-| **Wallet Type** |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;Retail / Enterprise | retail, enterprise |
-| &nbsp;&nbsp;&nbsp;&nbsp;Custody Type | self-custodial |
-| &nbsp;&nbsp;&nbsp;&nbsp;Form factor (Mobile / Browser / Desktop / Browser Extension / Hardware) | browser, mobile |
-| &nbsp;&nbsp;&nbsp;&nbsp;Deployment Model (Self-hosted / SaaS / Hybrid) | saas, hybrid |
-| **Canton Coin** |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;CC support (transfers and holding) | [✅](proofs/dummy-wallet/dummy-wallet-self-attestation.md#cc-support-transfers-and-holding-cc_support) 🛡️[ThirdParty](proofs/dummy-wallet/dummy-wallet-third-party-attestation.md#cc-support-transfers-and-holding-cc_support-verified-by-thirdparty) |
-| &nbsp;&nbsp;&nbsp;&nbsp;Pre-approvals for CC | [✅](proofs/dummy-wallet/dummy-wallet-self-attestation.md#pre-approvals-for-cc-preapprovals) |
-| **Token Standard** |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;CIP-0056 token standard transfer support | [✅](proofs/dummy-wallet/dummy-wallet-self-attestation.md#cip-0056-token-standard-transfer-support-cip_0056_transfer) |
-| &nbsp;&nbsp;&nbsp;&nbsp;CIP-0056 token standard allocation support | — |
-| &nbsp;&nbsp;&nbsp;&nbsp;CIP-112 token standard v2 support | ✅ |
-| **Interoperability** |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;CIP-0103 dApp API support | [✅](proofs/dummy-wallet/dummy-wallet-self-attestation.md#cip-0103-dapp-api-support-cip_0103_dapp_api) |
-| &nbsp;&nbsp;&nbsp;&nbsp;Wallet Connect support | [Not supported](wallets/dummy-wallet.yaml) |
-| &nbsp;&nbsp;&nbsp;&nbsp;Memo tag support for transfers to exchanges | [✅](proofs/dummy-wallet/dummy-wallet-self-attestation.md#memo-tag-support-for-transfers-to-exchanges-memo_tag_support) |
+| Feature | [Dummy Wallet](wallets/dummy-wallet.yaml) | [Send](wallets/send.yaml) |
+|---|---|---|
+| **Wallet Overview** |  |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;Website | [https://example.com/dummy-wallet](https://example.com/dummy-wallet) | [https://cantonwallet.com](https://cantonwallet.com) |
+| &nbsp;&nbsp;&nbsp;&nbsp;Added | 2026-06-10 | 2026-07-24 |
+| **Wallet Type** |  |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;Retail / Enterprise | retail, enterprise | retail |
+| &nbsp;&nbsp;&nbsp;&nbsp;Custody Type | self-custodial | self-custodial |
+| &nbsp;&nbsp;&nbsp;&nbsp;Form factor (Mobile / Browser / Desktop / Browser Extension / Hardware) | browser, mobile | browser, mobile, browser-extension |
+| &nbsp;&nbsp;&nbsp;&nbsp;Deployment Model (Self-hosted / SaaS / Hybrid) | saas, hybrid | saas |
+| **Canton Coin** |  |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;CC support (transfers and holding) | [✅](proofs/dummy-wallet/dummy-wallet-self-attestation.md#cc-support-transfers-and-holding-cc_support) 🛡️[ThirdParty](proofs/dummy-wallet/dummy-wallet-third-party-attestation.md#cc-support-transfers-and-holding-cc_support-verified-by-thirdparty) | ✅ |
+| &nbsp;&nbsp;&nbsp;&nbsp;Pre-approvals for CC | [✅](proofs/dummy-wallet/dummy-wallet-self-attestation.md#pre-approvals-for-cc-preapprovals) | ✅ |
+| **Token Standard** |  |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;CIP-0056 token standard transfer support | [✅](proofs/dummy-wallet/dummy-wallet-self-attestation.md#cip-0056-token-standard-transfer-support-cip_0056_transfer) | ✅ |
+| &nbsp;&nbsp;&nbsp;&nbsp;CIP-0056 token standard allocation support | — | ✅ |
+| &nbsp;&nbsp;&nbsp;&nbsp;CIP-112 token standard v2 support | ✅ | ✅ |
+| **Interoperability** |  |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;CIP-0103 dApp API support | [✅](proofs/dummy-wallet/dummy-wallet-self-attestation.md#cip-0103-dapp-api-support-cip_0103_dapp_api) | ✅ |
+| &nbsp;&nbsp;&nbsp;&nbsp;Wallet Connect support | [Not supported](wallets/dummy-wallet.yaml) | ✅ |
+| &nbsp;&nbsp;&nbsp;&nbsp;Memo tag support for transfers to exchanges | [✅](proofs/dummy-wallet/dummy-wallet-self-attestation.md#memo-tag-support-for-transfers-to-exchanges-memo_tag_support) | ✅ |
 
 ## Other Features
 
-| Feature | [Dummy Wallet](wallets/dummy-wallet.yaml) |
-|---|---|
-| **App Specific** |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;Pre-approvals for DA Registry issued assets | — |
-| &nbsp;&nbsp;&nbsp;&nbsp;Wallet Gateway signing driver | — |
-| **Party Specific** |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;Key generation method | — |
-| &nbsp;&nbsp;&nbsp;&nbsp;Key recovery | ✅ |
-| &nbsp;&nbsp;&nbsp;&nbsp;Social recovery | — |
-| &nbsp;&nbsp;&nbsp;&nbsp;Multi-address / account | — |
-| &nbsp;&nbsp;&nbsp;&nbsp;Distributed parties | — |
-| **Network relevant features** |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;UTXO merge delegation contract enabled | — |
-| **Transaction Signing** |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;Policy workflows | — |
-| &nbsp;&nbsp;&nbsp;&nbsp;Threshold Signature Scheme | — |
-| &nbsp;&nbsp;&nbsp;&nbsp;Hardware wallet support | ✅ |
-| **Wallet Capabilities** |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;Compliance | — |
-| &nbsp;&nbsp;&nbsp;&nbsp;Validator hosting (self-hosted / BYOV) | — |
-| &nbsp;&nbsp;&nbsp;&nbsp;Tokenization | — |
-| &nbsp;&nbsp;&nbsp;&nbsp;Reward minting | — |
-| &nbsp;&nbsp;&nbsp;&nbsp;Transfer object / proof of transfer support | — |
-| &nbsp;&nbsp;&nbsp;&nbsp;Clear signing | ✅ |
-| &nbsp;&nbsp;&nbsp;&nbsp;Integrated swaps | — |
-| &nbsp;&nbsp;&nbsp;&nbsp;Assets supported | CC, USDC (CIP-0056), Example Token (CIP-0056) |
-| &nbsp;&nbsp;&nbsp;&nbsp;Languages supported | English, German |
+| Feature | [Dummy Wallet](wallets/dummy-wallet.yaml) | [Send](wallets/send.yaml) |
+|---|---|---|
+| **App Specific** |  |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;Pre-approvals for DA Registry issued assets | — | — |
+| &nbsp;&nbsp;&nbsp;&nbsp;Wallet Gateway signing driver | — | — |
+| **Party Specific** |  |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;Key generation method | — | — |
+| &nbsp;&nbsp;&nbsp;&nbsp;Key recovery | ✅ | ✅ |
+| &nbsp;&nbsp;&nbsp;&nbsp;Social recovery | — | — |
+| &nbsp;&nbsp;&nbsp;&nbsp;Multi-address / account | — | — |
+| &nbsp;&nbsp;&nbsp;&nbsp;Distributed parties | — | — |
+| **Network relevant features** |  |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;UTXO merge delegation contract enabled | — | — |
+| **Transaction Signing** |  |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;Policy workflows | — | — |
+| &nbsp;&nbsp;&nbsp;&nbsp;Threshold Signature Scheme | — | — |
+| &nbsp;&nbsp;&nbsp;&nbsp;Hardware wallet support | ✅ | ✅ |
+| **Wallet Capabilities** |  |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;Compliance | — | — |
+| &nbsp;&nbsp;&nbsp;&nbsp;Validator hosting (self-hosted / BYOV) | — | — |
+| &nbsp;&nbsp;&nbsp;&nbsp;Tokenization | — | — |
+| &nbsp;&nbsp;&nbsp;&nbsp;Reward minting | — | — |
+| &nbsp;&nbsp;&nbsp;&nbsp;Transfer object / proof of transfer support | — | — |
+| &nbsp;&nbsp;&nbsp;&nbsp;Clear signing | ✅ | — |
+| &nbsp;&nbsp;&nbsp;&nbsp;Integrated swaps | — | ✅ |
+| &nbsp;&nbsp;&nbsp;&nbsp;Assets supported | CC, USDC (CIP-0056), Example Token (CIP-0056) | CC, CIP-0056 tokens |
+| &nbsp;&nbsp;&nbsp;&nbsp;Languages supported | English, German | English |
