@@ -23,7 +23,7 @@ be unsupported, contradicting the wallet -- click the name for their evidence ·
 | &nbsp;&nbsp;&nbsp;&nbsp;Website | [https://www.dfns.co](https://www.dfns.co) | [https://cantonwallet.com](https://cantonwallet.com) |
 | &nbsp;&nbsp;&nbsp;&nbsp;Added | 2026-07-24 | 2026-07-24 |
 | **Wallet Type** |  |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;Retail / Enterprise | enterprise | retail |
+| &nbsp;&nbsp;&nbsp;&nbsp;Retail / Enterprise | enterprise | retail, enterprise |
 | &nbsp;&nbsp;&nbsp;&nbsp;Custody Type | self-custodial | self-custodial |
 | &nbsp;&nbsp;&nbsp;&nbsp;Form factor (Mobile / Browser / Desktop / Browser Extension / Hardware) | browser | browser, mobile, browser-extension |
 | &nbsp;&nbsp;&nbsp;&nbsp;Deployment Model (Self-hosted / SaaS / Hybrid) | self-hosted, saas, hybrid | saas |
@@ -50,13 +50,13 @@ be unsupported, contradicting the wallet -- click the name for their evidence ·
 | &nbsp;&nbsp;&nbsp;&nbsp;Key generation method | MPC/TSS -- keys generated as distributed shares across Dfns's signing network -- or HSM-based key generation; no seed phrases | — |
 | &nbsp;&nbsp;&nbsp;&nbsp;Key recovery | ✅ | ✅ |
 | &nbsp;&nbsp;&nbsp;&nbsp;Social recovery | — | — |
-| &nbsp;&nbsp;&nbsp;&nbsp;Multi-address / account | ✅ | — |
-| &nbsp;&nbsp;&nbsp;&nbsp;Distributed parties | — | — |
+| &nbsp;&nbsp;&nbsp;&nbsp;Multi-address / account | ✅ | ✅ |
+| &nbsp;&nbsp;&nbsp;&nbsp;Distributed parties | — | ✅ |
 | **Network relevant features** |  |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;UTXO merge delegation contract enabled | — | — |
 | **Transaction Signing** |  |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;Policy workflows | ✅ | — |
-| &nbsp;&nbsp;&nbsp;&nbsp;Threshold Signature Scheme | ✅ | — |
+| &nbsp;&nbsp;&nbsp;&nbsp;Policy workflows | ✅ | ✅ |
+| &nbsp;&nbsp;&nbsp;&nbsp;Threshold Signature Scheme | ✅ | ✅ |
 | &nbsp;&nbsp;&nbsp;&nbsp;Hardware wallet support | [✅](proofs/dfns/dfns-self-attestation.md#hardware-wallet-support-hardware_wallet_support) | ✅ |
 | **Wallet Capabilities** |  |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;Compliance | ✅ | — |
