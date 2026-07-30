@@ -23,7 +23,7 @@ be unsupported, contradicting the wallet -- click the name for their evidence ·
 | &nbsp;&nbsp;&nbsp;&nbsp;Website | [https://wallet.askardex.com](https://wallet.askardex.com) | [https://www.dfns.co](https://www.dfns.co) | [https://cantonwallet.com](https://cantonwallet.com) | [https://walley.cc](https://walley.cc) |
 | &nbsp;&nbsp;&nbsp;&nbsp;Added | 2026-07-25 | 2026-07-24 | 2026-07-24 | 2026-07-27 |
 | **Wallet Type** |  |  |  |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;Retail / Enterprise | Retail | enterprise | retail | retail |
+| &nbsp;&nbsp;&nbsp;&nbsp;Retail / Enterprise | Retail | enterprise | retail, enterprise | retail |
 | &nbsp;&nbsp;&nbsp;&nbsp;Custody Type | Self-custodial | self-custodial | self-custodial | self-custodial |
 | &nbsp;&nbsp;&nbsp;&nbsp;Form factor (Mobile / Browser / Desktop / Browser Extension / Hardware) | mobile | browser | browser, mobile, browser-extension | browser |
 | &nbsp;&nbsp;&nbsp;&nbsp;Deployment Model (Self-hosted / SaaS / Hybrid) | saas | self-hosted, saas, hybrid | saas | saas |
@@ -50,13 +50,13 @@ be unsupported, contradicting the wallet -- click the name for their evidence ·
 | &nbsp;&nbsp;&nbsp;&nbsp;Key generation method | Seed phrase (BIP-39 mnemonic, 24 words) | MPC/TSS -- keys generated as distributed shares across Dfns's signing network -- or HSM-based key generation; no seed phrases | — | WebAuthn passkey PRF secret, expanded with HKDF-SHA512 into an Ed25519 signing key that is generated and held in the browser. A 24-word BIP-39 phrase backs up the same secret. |
 | &nbsp;&nbsp;&nbsp;&nbsp;Key recovery | ✅ | ✅ | ✅ | ✅ |
 | &nbsp;&nbsp;&nbsp;&nbsp;Social recovery | — | — | — | [Not supported](wallets/walley.yaml) |
-| &nbsp;&nbsp;&nbsp;&nbsp;Multi-address / account | — | ✅ | — | [Not supported](wallets/walley.yaml) |
-| &nbsp;&nbsp;&nbsp;&nbsp;Distributed parties | — | — | — | [Not supported](wallets/walley.yaml) |
+| &nbsp;&nbsp;&nbsp;&nbsp;Multi-address / account | — | ✅ | ✅ | [Not supported](wallets/walley.yaml) |
+| &nbsp;&nbsp;&nbsp;&nbsp;Distributed parties | — | — | ✅ | [Not supported](wallets/walley.yaml) |
 | **Network relevant features** |  |  |  |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;UTXO merge delegation contract enabled | — | — | — | [✅](proofs/walley/walley-self-attestation.md#utxo-merge-delegation-contract-enabled-utxo_merge_delegation) |
 | **Transaction Signing** |  |  |  |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;Policy workflows | — | ✅ | — | [Not supported](wallets/walley.yaml) |
-| &nbsp;&nbsp;&nbsp;&nbsp;Threshold Signature Scheme | — | ✅ | — | [Not supported](wallets/walley.yaml) |
+| &nbsp;&nbsp;&nbsp;&nbsp;Policy workflows | — | ✅ | ✅ | [Not supported](wallets/walley.yaml) |
+| &nbsp;&nbsp;&nbsp;&nbsp;Threshold Signature Scheme | — | ✅ | ✅ | [Not supported](wallets/walley.yaml) |
 | &nbsp;&nbsp;&nbsp;&nbsp;Hardware wallet support | — | [✅](proofs/dfns/dfns-self-attestation.md#hardware-wallet-support-hardware_wallet_support) | ✅ | [Not supported](wallets/walley.yaml) |
 | **Wallet Capabilities** |  |  |  |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;Compliance | — | ✅ | — | — |
