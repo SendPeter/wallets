@@ -51,6 +51,7 @@ features:
     verified_by: []
 
   # Party Specific
+  key_generation_method: "Passkey-based (WebAuthn) key generation on the user's device; no seed phrases"
   key_recovery:
     supported: true
   multi_address:
