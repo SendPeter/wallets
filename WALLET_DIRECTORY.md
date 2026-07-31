@@ -54,7 +54,7 @@ A linked "Not supported" means the wallet has said no with a reason
 | &nbsp;&nbsp;&nbsp;&nbsp;Pre-approvals for DA Registry issued assets | [Not supported](wallets/dfns.yaml) | — | — | [✅](proofs/walley/walley-self-attestation.md#pre-approvals-for-da-registry-issued-assets-registry_preapprovals) |
 | &nbsp;&nbsp;&nbsp;&nbsp;Wallet Gateway signing driver | [✅](proofs/dfns/dfns-self-attestation.md#wallet-gateway-signing-driver-wallet_gateway_signing_driver) | — | — | [Not supported](wallets/walley.yaml) |
 | **Party Specific** |  |  |  |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;Key generation method | MPC/TSS -- keys generated as<br>distributed shares across<br>Dfns's signing network -- or<br>HSM-based key generation; no<br>seed phrases | — | Seed phrase (BIP-39 mnemonic,<br>24 words) | WebAuthn passkey PRF secret,<br>expanded with HKDF-SHA512 into<br>an Ed25519 signing key that is<br>generated and held in the<br>browser. A 24-word BIP-39<br>phrase backs up the same<br>secret. |
+| &nbsp;&nbsp;&nbsp;&nbsp;Key generation method | MPC/TSS -- keys generated as<br>distributed shares across<br>Dfns's signing network -- or<br>HSM-based key generation; no<br>seed phrases | Passkey-based (WebAuthn) key<br>generation on the user's<br>device; no seed phrases | Seed phrase (BIP-39 mnemonic,<br>24 words) | WebAuthn passkey PRF secret,<br>expanded with HKDF-SHA512 into<br>an Ed25519 signing key that is<br>generated and held in the<br>browser. A 24-word BIP-39<br>phrase backs up the same<br>secret. |
 | &nbsp;&nbsp;&nbsp;&nbsp;Key recovery | ✅ | ✅ | ✅ | ✅ |
 | &nbsp;&nbsp;&nbsp;&nbsp;Social recovery | — | — | — | [Not supported](wallets/walley.yaml) |
 | &nbsp;&nbsp;&nbsp;&nbsp;Multi-address / account | ✅ | ✅ | — | [Not supported](wallets/walley.yaml) |
