@@ -63,8 +63,8 @@ A linked "Not supported" means the wallet has said no with a reason
 | &nbsp;&nbsp;&nbsp;&nbsp;UTXO merge delegation contract enabled | — | — | — | [✅](proofs/walley/walley-self-attestation.md#utxo-merge-delegation-contract-enabled-utxo_merge_delegation) |
 | **Validator Hosting** |  |  |  |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;Bring-Your-Own-Validator (BYOV) | ✅ | — | — | [Not supported](wallets/walley.yaml) |
-| &nbsp;&nbsp;&nbsp;&nbsp;Private validator | — | — | — | — |
-| &nbsp;&nbsp;&nbsp;&nbsp;Shared validator | — | — | — | — |
+| &nbsp;&nbsp;&nbsp;&nbsp;Private validator | — | ✅ | — | — |
+| &nbsp;&nbsp;&nbsp;&nbsp;Shared validator | — | ✅ | — | — |
 | **Transaction Signing** |  |  |  |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;Policy workflows | ✅ | ✅ | — | [Not supported](wallets/walley.yaml) |
 | &nbsp;&nbsp;&nbsp;&nbsp;Threshold Signature Scheme | ✅ | ✅ | — | [Not supported](wallets/walley.yaml) |
