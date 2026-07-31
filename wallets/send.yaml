@@ -60,6 +60,12 @@ features:
     proof: null
     verified_by: []
 
+  # Validator Hosting
+  validator_hosting_private:
+    supported: true
+  validator_hosting_shared:
+    supported: true
+
   # Transaction Signing
   policy_workflows:
     supported: true
