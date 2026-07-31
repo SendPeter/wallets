@@ -50,6 +50,12 @@ features:
     proof: null
     verified_by: []
 
+  # App Specific
+  registry_preapprovals:
+    supported: true
+    proof: null
+    verified_by: []
+
   # Party Specific
   key_generation_method: "Passkey-based (WebAuthn) key generation on the user's device; no seed phrases"
   key_recovery:
@@ -57,6 +63,12 @@ features:
   multi_address:
     supported: true
   distributed_parties:
+    supported: true
+    proof: null
+    verified_by: []
+
+  # Network Relevant Features
+  utxo_merge_delegation:
     supported: true
     proof: null
     verified_by: []
@@ -78,6 +90,14 @@ features:
     verified_by: []
 
   # Wallet Capabilities
+  tokenization:
+    supported: true
+    proof: null
+    verified_by: []
+  transfer_proof:
+    supported: true
+    proof: null
+    verified_by: []
   integrated_swaps:
     supported: true
     proof: null
