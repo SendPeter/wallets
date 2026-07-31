@@ -17,7 +17,8 @@ regenerated WALLET_DIRECTORY.md alongside your change.
 
 Output is two tables, matching the split in Feature List.md: "Wallet
 Overview & Primary Canton Network Features" (Wallet Type, Canton Coin,
-Token Standard, Interoperability) and "Other Features" (everything else).
+Token Standard, dApp Connectivity (CIP-103)) and "Other Features"
+(everything else).
 There is no "required vs. optional" distinction -- see the note at the top
 of wallets/_feature_registry.yaml.
 """
@@ -25,12 +26,20 @@ import argparse
 import glob
 import os
 import re
+import textwrap
 
 INDENT = "&nbsp;&nbsp;&nbsp;&nbsp;"
 
+# GitHub markdown tables have no column-width control (no CSS support in
+# rendered .md), so long free-text cells (e.g. key_generation_method,
+# assets_supported) would otherwise force that whole column wide. Wrapping
+# at a fixed character count with <br> keeps every column's width capped
+# and predictable -- the cell just gets taller instead of the column wider.
+CELL_WRAP_WIDTH = 30
+
 # Categories that make up table 1, "Wallet Overview & Primary Canton
 # Network Features" -- everything else goes in table 2, "Other Features".
-TABLE_1_CATEGORIES = {"Wallet Type", "Canton Coin", "Token Standard", "Interoperability"}
+TABLE_1_CATEGORIES = {"Wallet Type", "Canton Coin", "Token Standard", "dApp Connectivity (CIP-103)"}
 
 
 # --- Minimal YAML reader -----------------------------------------------
@@ -221,7 +230,9 @@ def load_wallets(wallets_dir):
             continue
         data["_source_file"] = os.path.relpath(path)
         wallets.append(data)
-    return sorted(wallets, key=lambda w: w.get("name", "").lower())
+    # Ordered by date added (earliest first, left to right); wallets missing
+    # `added` sort to the end. Same-day ties break alphabetically by name.
+    return sorted(wallets, key=lambda w: (w.get("added") or "9999-99-99", w.get("name", "").lower()))
 
 
 def wallet_file_link(wallet):
@@ -273,13 +284,24 @@ def render_boolean_cell(feature_id, wallet, self_attested_only=False):
     return cell
 
 
+def wrap_cell_text(text, width=CELL_WRAP_WIDTH):
+    # break_long_words=False: a single word/URL longer than `width` is left
+    # intact on its own line rather than getting chopped mid-word.
+    lines = textwrap.wrap(text, width=width, break_long_words=False, break_on_hyphens=False)
+    return "<br>".join(lines) if lines else text
+
+
 def render_freetext_cell(feature_id, wallet):
     val = (wallet.get("features") or {}).get(feature_id)
     if val in (None, "", []):
         return "—"
     if isinstance(val, list):
-        return ", ".join(str(v) for v in val) if val else "—"
-    return str(val)
+        text = ", ".join(str(v) for v in val) if val else None
+    else:
+        text = str(val)
+    if not text:
+        return "—"
+    return wrap_cell_text(text)
 
 
 def render_feature_cell(feature, wallet):
@@ -360,10 +382,16 @@ def main():
 Source of truth for Canton Network wallet providers' supported features and
 assets, per the Wallet Directory Program (see [CONTRIBUTING.md](./CONTRIBUTING.md)).
 
-**Legend:** ✅ self-attested -- click through to the evidence · 🛡️ *name* verified by an
-independent third party -- click the name for their evidence · ❌ *name* found this claim to
-be unsupported, contradicting the wallet -- click the name for their evidence · a linked
-"Not supported" means the wallet has said no with a reason ·
+**Legend**
+
+✅ self-attested -- click through to the evidence
+
+🛡️ *name* verified by an independent third party -- click the name for their evidence
+
+❌ *name* found this claim to be unsupported, contradicting the wallet -- click the name for their evidence
+
+A linked "Not supported" means the wallet has said no with a reason
+
 — no claim made either way.
 
 ## Wallet Overview & Primary Canton Network Features
